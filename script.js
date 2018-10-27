@@ -1,4 +1,5 @@
-document.getElementById("createEvent_button").click(function() {
+document.getElementById("createEvent_button").onClick = function() {
+    console.log("Here!");
     var x = document.getElementsByClassName("createEvent");
     var y = document.getElementsByClassName("viewEvent");
     var z = document.getElementsByClassName("setup");
@@ -7,10 +8,10 @@ document.getElementById("createEvent_button").click(function() {
     y.style.display = "none";
     z.style.display = "none";
 
-});
+};
 
 
-document.getElementById("viewEvent_button").click(function() {
+document.getElementById("viewEvent_button").onClick = function() {
     var x = document.getElementsByClassName("createEvent");
     var y = document.getElementsByClassName("viewEvent");
     var z = document.getElementsByClassName("setup");
@@ -19,9 +20,9 @@ document.getElementById("viewEvent_button").click(function() {
     y.style.display = "block";
     z.style.display = "none";
 
-});
+};
 
-document.getElementById("setup_button").click(function() {
+document.getElementById("setup_button").onClick = function() {
     var x = document.getElementsByClassName("createEvent");
     var y = document.getElementsByClassName("viewEvent");
     var z = document.getElementsByClassName("setup");
@@ -30,7 +31,7 @@ document.getElementById("setup_button").click(function() {
     y.style.display = "none";
     z.style.display = "block";
 
-});
+};
 
 
 
