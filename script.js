@@ -1,8 +1,8 @@
-document.getElementById("createEvent_button").onClick = function() {
-    console.log("Here!");
-    var x = document.getElementsByClassName("createEvent");
-    var y = document.getElementsByClassName("viewEvent");
-    var z = document.getElementsByClassName("setup");
+
+document.getElementById("createEvent_button").onclick = function() {
+    var x = document.getElementById("createEvent");
+    var y = document.getElementById("viewEvent");
+    var z = document.getElementById("setup");
 
     x.style.display = "block";
     y.style.display = "none";
@@ -11,10 +11,10 @@ document.getElementById("createEvent_button").onClick = function() {
 };
 
 
-document.getElementById("viewEvent_button").onClick = function() {
-    var x = document.getElementsByClassName("createEvent");
-    var y = document.getElementsByClassName("viewEvent");
-    var z = document.getElementsByClassName("setup");
+document.getElementById("viewEvent_button").onclick = function() {
+    var x = document.getElementById("createEvent");
+    var y = document.getElementById("viewEvent");
+    var z = document.getElementById("setup");
 
     x.style.display = "none";
     y.style.display = "block";
@@ -22,10 +22,10 @@ document.getElementById("viewEvent_button").onClick = function() {
 
 };
 
-document.getElementById("setup_button").onClick = function() {
-    var x = document.getElementsByClassName("createEvent");
-    var y = document.getElementsByClassName("viewEvent");
-    var z = document.getElementsByClassName("setup");
+document.getElementById("setup_button").onclick = function() {
+    var x = document.getElementById("createEvent");
+    var y = document.getElementById("viewEvent");
+    var z = document.getElementById("setup");
 
     x.style.display = "none";
     y.style.display = "none";
