@@ -54,3 +54,9 @@ function storeEvent() {
   var input = document.getElementById("eventin").elements;
   window.localStorage.event = input;
 }
+
+document.getElementById("userInput").onkeydown = function(event) {
+        if (event.keyCode == 13) {
+        addItem();
+    }
+}
