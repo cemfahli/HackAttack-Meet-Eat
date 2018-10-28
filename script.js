@@ -1,4 +1,5 @@
 
+//main page code
 document.getElementById("createEvent_button").onclick = function() {
     var x = document.getElementById("createEvent");
     var y = document.getElementById("viewEvent");
@@ -23,6 +24,7 @@ document.getElementById("viewEvent_button").onclick = function() {
 };
 
 document.getElementById("setup_button").onclick = function() {
+    console.log("here!");
     var x = document.getElementById("createEvent");
     var y = document.getElementById("viewEvent");
     var z = document.getElementById("setup");
@@ -33,6 +35,22 @@ document.getElementById("setup_button").onclick = function() {
 
 };
 
+//setup code
+var interests = []
+function addItem(){
+    var li = document.createElement("li");  
+    var input = document.getElementById("userInput");
+    li.innerHTML = input.value;
+    if (input.value === "") {
+        alert("Please enter an item!")
+    }
+    document.getElementById("myUL").appendChild(li);
+    interests.push(input.value)
+    document.getElementById("userInput").value = "";
+}
 
 
-
+function storeEvent() {
+  var input = document.getElementById("eventin").elements;
+  window.localStorage.event = input;
+}

@@ -3,8 +3,11 @@
 <head>
 	<title> Lunch Chat</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
   	<link rel="stylesheet" type="text/css" href="style.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   	<meta charset="UTF-8">
 
 
@@ -23,15 +26,96 @@
 		</div>
 
 		<div id="createEvent" >
-			<p>Show Create Event</p>
+			<form method="post" action="#" onsubmit="storeEvent();return false" id="eventin">
+	        <label for="location">Location</label>
+	        <input type="text" id="location" name="location"><br>
+	        <label for="time">Time</label>
+	        <input type="time" id="time" name="time"><br>
+	        <label for="capacity">Capacity</label>
+	        <input type="number" id="capacity" name="capacity" min="2" max ="5"><br>
+	        <label for="description">Describe how you'll meet</label><br>
+	        <textarea id="description" name="description"></textarea><br>
+	        <input type="submit" value="Create Event">
+	      	</form>
 		</div>
 
 		<div id="viewEvent" >
-			<p>Show View Event</p>
+			<div class="col-sm-12"><h1><strong> Available Events </strong></h1></div>
+		    <div class="col-sm-6" style ="background-color: #EAC67A;">
+		      <hr>
+		      <h2>Let's chat about career changes!</h2>
+		      <h5><span class="glyphicon glyphicon-time"></span> Event Time: Monday, October 29th, 2018 @ 12:00PM</h5>
+			  <h5><span class="glyphicon glyphicon-globe"></span> Event Location: The Smith (956 2nd Ave, New York, NY 10022) </h5>	  
+			  <h5><span class="glyphicon glyphicon-cutlery"></span> Cuisine: American </h5>
+			  <h5><span class="glyphicon glyphicon-user"></span> 2/3 Spot(s) Left </h5>
+			  <button type="button" class="btn btn-primary">Join Event</button>
+			</div>
+			<div class="col-sm-6" style ="background-color: #EAC67A;">
+		      <hr>
+		      <h2>Casual Meetup with Like-minded People</h2>
+		      <h5><span class="glyphicon glyphicon-time"></span> Event Time: Monday, October 29th, 2018 @ 1:00PM</h5>
+			  <h5><span class="glyphicon glyphicon-globe"></span> Event Location: Indian Accent (123 W 56th St, New York, NY 10019) </h5>
+			  <h5><span class="glyphicon glyphicon-cutlery"></span> Cuisine: Indian </h5>	  
+			  <h5><span class="glyphicon glyphicon-user"></span> 0/2 Spot(s) Left </h5>
+			  <button type="button" class="btn btn-primary">Join Event</button>
+			</div>
+			<div class="col-sm-6" style ="background-color: #EAC67A;">
+		      <hr>
+		      <h2>Any Knicks fans?</h2>
+		      <h5><span class="glyphicon glyphicon-time"></span> Event Time: Monday, October 29th, 2018 @ 1:15PM</h5>
+			  <h5><span class="glyphicon glyphicon-globe"></span> Event Location: Nerai (55 E 54th St, New York, NY 10022) </h5>
+			  <h5><span class="glyphicon glyphicon-cutlery"></span> Cuisine: Mediterranean </h5>	  
+			  <h5><span class="glyphicon glyphicon-user"></span> 3/5 Spot(s) Left </h5>
+			  <button type="button" class="btn btn-primary">Join Event</button>
+			</div>
+			<div class="col-sm-6" style ="background-color: #EAC67A;">
+		      <hr>
+		      <h2>Music Junkies</h2>
+		      <h5><span class="glyphicon glyphicon-time"></span> Event Time: Monday, October 29th, 2018 @ 1:30PM</h5>
+			  <h5><span class="glyphicon glyphicon-globe"></span> Event Location: Glaze Teriyaki (643 Lexington Ave, New York, NY 10022)  </h5>
+			  <h5><span class="glyphicon glyphicon-cutlery"></span> Cuisine: Japanese  </h5>	  
+			  <h5><span class="glyphicon glyphicon-user"></span> 4/4 Spot(s) Left </h5>
+			  <button type="button" class="btn btn-primary">Join Event</button>
+			</div>
+			<div class="col-sm-6" style ="background-color: #EAC67A;">
+		      <hr>
+		      <h2>Traveling Advice</h2>
+		      <h5><span class="glyphicon glyphicon-time"></span> Event Time: Monday, October 29th, 2018 @ 2:00PM</h5>
+			  <h5><span class="glyphicon glyphicon-globe"></span> Event Location: The Sea Grill (19 W 49th St, New York, NY 10020)</h5>
+			  <h5><span class="glyphicon glyphicon-cutlery"></span> Cuisine: Seafood  </h5>	  
+			  <h5><span class="glyphicon glyphicon-user"></span> 4/5 Spot(s) Left </h5>
+			  <button type="button" class="btn btn-primary">Join Event</button>
+			</div>
+			<div class="col-sm-6" style ="background-color: #EAC67A;">
+		      <hr>
+		      <h2>Career Insight</h2>
+		      <h5><span class="glyphicon glyphicon-time"></span> Event Time: Monday, October 29th, 2018 @ 2:30PM</h5>
+			  <h5><span class="glyphicon glyphicon-globe"></span> Event Location: Da Noi (214 E 49th St, New York, NY 10017) </h5>
+			  <h5><span class="glyphicon glyphicon-cutlery"></span> Cuisine: Italian </h5>	  
+			  <h5><span class="glyphicon glyphicon-user"></span> 1/4 Spot(s) Left </h5>
+			  <button type="button" class="btn btn-primary">Join Event</button>
+			</div>
+			<div class="col-sm-12" style = "padding-bottom: 30px;">
+			  <br><br>
+			<button type="button" class="btn btn-secondary">More Events</button>
+			</div>
 		</div>
 
+
 		<div id="setup">
-			<p>Show setup </p>
+			<div id="container">
+			<h1>What are you interested in?</h1>
+			<div id="input-div">
+			<input type="text" id="userInput">
+			<span onclick="addItem()" class="fas fa-plus"></span> 
+			</div>
+			<div id="list-div">
+			<ul id="myUL">
+			<li>Sci-Fi Movies</li>
+			</ul>
+			</div>
+			</div>
+			<button id="submit-button" class="btn btn-primary">Submit</button>
 		</div>
 
 
