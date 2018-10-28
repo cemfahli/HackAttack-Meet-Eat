@@ -24,6 +24,7 @@
 		</div>
 
 		<div id="createEvent" >
+<<<<<<< HEAD
       <form method="post" action="#" onsubmit="storeEvent();return false" id="eventin">
         <label for="location">Location</label>
         <input type="text" id="location" name="location"><br>
@@ -35,7 +36,9 @@
         <textarea id="description" name="description"></textarea><br>
         <input type="submit" value="Create Event">
       </form>
-
+=======
+			<p>Show Create Event</p>
+>>>>>>> 18918cb0e58e1c673187b8e7d86bce250d096abb
 		</div>
 
 		<div id="viewEvent" >
