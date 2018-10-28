@@ -25,14 +25,14 @@ body{
 	opacity: 0.5;
 }
 
-.createEvent{
+#createEvent{
 	display:none;
 }
 
-.viewEvent{
+#viewEvent{
 	display:none;
 }
 
-.setup{
+#setup{
 	display:none;
 }
